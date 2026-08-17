@@ -1,12 +1,12 @@
 /* =========================================================
    ROCK AND ROLL CHESS CLUB
    COMPLETE STYLESHEET
-   ================================================= */
+   ========================================================= */
 
 
 /* =========================================================
    GLOBAL RESET
-   ================================================= */
+   ========================================================= */
 
 * {
 
@@ -21,7 +21,7 @@
 
 /* =========================================================
    ANIMATED CSS ANGLE
-   ================================================= */
+   ========================================================= */
 
 @property --angle {
 
@@ -36,7 +36,7 @@
 
 /* =========================================================
    HTML / BODY
-   ================================================= */
+   ========================================================= */
 
 html,
 body {
@@ -73,7 +73,7 @@ body {
 
 /* =========================================================
    MAIN SIDEBAR
-   ================================================= */
+   ========================================================= */
 
 .sidebar {
 
@@ -191,8 +191,8 @@ body {
 
         linear-gradient(
             135deg,
-            rgba(70, 55, 95, 0.72),
-            rgba(45, 35, 65, 0.78)
+            rgba(55, 43, 78, 0.88),
+            rgba(38, 29, 55, 0.92)
         );
 
     border-radius:
@@ -220,14 +220,8 @@ body {
         blur(12px);
 
     transition:
-
-        transform
-        0.3s
-        ease,
-
-        box-shadow
-        0.3s
-        ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
 }
 
@@ -332,7 +326,7 @@ body {
 .byline a {
 
     color:
-        #ffffff;
+        #dffbff;
 
     text-decoration:
         none;
@@ -415,21 +409,18 @@ body {
         rgba(255, 255, 255, 0.45);
 
     transition:
+        transform 0.3s ease,
+        box-shadow 0.25s ease;
 
-        transform
-        0.3s
-        ease,
-
-        box-shadow
-        0.3s
-        ease;
+    border-radius:
+        8px;
 
 }
 
 
 /* =========================================================
-   MINI DIV HOVER
-   Same style as the header
+   MINI-DIV HOVER
+   Same general hover effect as the header
    ========================================================= */
 
 .welcome:hover,
@@ -443,7 +434,7 @@ body {
     box-shadow:
 
         0 12px 30px
-        rgba(0, 0, 0, 0.38),
+        rgba(0, 0, 0, 0.30),
 
         inset
         0 1px 0
@@ -702,6 +693,10 @@ body {
 }
 
 
+/* =========================================================
+   WELCOME CONTENT
+   ========================================================= */
+
 .welcome div {
 
     width:
@@ -843,12 +838,12 @@ body {
         translateY(-2px);
 
     border-color:
-        rgba(120, 225, 255, 0.85);
+        rgba(120, 225, 245, 0.85);
 
     box-shadow:
 
         0 5px 14px
-        rgba(80, 210, 255, 0.22),
+        rgba(100, 225, 245, 0.20),
 
         inset
         0 1px 0
@@ -895,7 +890,7 @@ body {
 .owner-text a {
 
     color:
-        #ffffff;
+        #dffbff;
 
     text-decoration:
         none;
@@ -914,7 +909,7 @@ body {
 .owner-text a:hover {
 
     color:
-        #8eeaff;
+        #9eeeff;
 
     text-decoration:
         underline;
@@ -924,7 +919,7 @@ body {
 
 /* =========================================================
    JOIN BUTTON
-   Green intentionally retained
+   Lavender — deliberately NOT cyan
    ========================================================= */
 
 .join-button {
@@ -952,7 +947,7 @@ body {
 
     border:
         1px solid
-        #9bd900;
+        #d8c8f5;
 
     font-size:
         14px;
@@ -969,14 +964,14 @@ body {
     box-shadow:
 
         0 2px 5px
-        rgba(168, 255, 0, 0.25);
+        rgba(190, 169, 225, 0.35);
 
     background:
 
         linear-gradient(
             135deg,
-            #a8ff00 0%,
-            #72b900 100%
+            #c9b9e8 0%,
+            #9f8bc4 100%
         );
 
     transition:
@@ -999,7 +994,7 @@ body {
     box-shadow:
 
         0 4px 10px
-        rgba(168,255,0,0.40);
+        rgba(190, 169, 225, 0.50);
 
 }
 
@@ -1069,12 +1064,12 @@ body {
 
     border:
         2px solid
-        #82e8ff;
+        #78e8ff;
 
     box-shadow:
 
         0 3px 10px
-        rgba(80, 220, 255, 0.25);
+        rgba(100, 225, 245, 0.25);
 
     background:
         #000000;
@@ -1128,7 +1123,7 @@ body {
     box-shadow:
 
         0 5px 15px
-        rgba(80, 220, 255, 0.35);
+        rgba(100, 225, 245, 0.35);
 
 }
 
@@ -1171,10 +1166,24 @@ body {
 }
 
 
-.credits-made-by a {
+.credit-list {
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
 
     color:
         #ffffff;
+
+}
+
+
+.credit-list a {
+
+    color:
+        #dffbff;
 
     text-decoration:
         none;
@@ -1190,27 +1199,13 @@ body {
 }
 
 
-.credits-made-by a:hover {
+.credit-list a:hover {
 
     color:
-        #8eeaff;
+        #9eeeff;
 
     text-decoration:
         underline;
-
-}
-
-
-.credit-list {
-
-    font-size:
-        13px;
-
-    line-height:
-        1.8;
-
-    color:
-        #ffffff;
 
 }
 
