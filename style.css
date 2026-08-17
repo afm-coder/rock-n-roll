@@ -183,26 +183,33 @@ body {
    ========================================================= */
 
 .header {
-    text-align: center;
+
+    text-align:
+        center;
 
     background:
+
         linear-gradient(
             135deg,
             rgba(70, 55, 95, 0.72),
             rgba(45, 35, 65, 0.78)
         );
 
-    border-radius: 14px;
+    border-radius:
+        14px;
 
-    padding: 18px 12px;
+    padding:
+        18px 12px;
 
-    margin-bottom: 15px;
+    margin-bottom:
+        15px;
 
     border:
         1px solid
         rgba(210, 190, 235, 0.22);
 
     box-shadow:
+
         0 8px 25px
         rgba(0, 0, 0, 0.28);
 
@@ -213,17 +220,28 @@ body {
         blur(12px);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+
+        transform
+        0.3s
+        ease,
+
+        box-shadow
+        0.3s
+        ease;
+
 }
 
+
 .header:hover {
+
     transform:
         translateY(-2px);
 
     box-shadow:
+
         0 12px 30px
         rgba(0, 0, 0, 0.38);
+
 }
 
 
@@ -397,22 +415,35 @@ body {
         rgba(255, 255, 255, 0.45);
 
     transition:
+
+        transform
+        0.3s
+        ease,
+
         box-shadow
-        0.25s
+        0.3s
         ease;
 
 }
 
+
+/* =========================================================
+   MINI DIV HOVER
+   Same style as the header
+   ========================================================= */
 
 .welcome:hover,
 .owners:hover,
 .radio:hover,
 .credits:hover {
 
+    transform:
+        translateY(-2px);
+
     box-shadow:
 
-        0 6px 18px
-        rgba(0, 0, 0, 0.30),
+        0 12px 30px
+        rgba(0, 0, 0, 0.38),
 
         inset
         0 1px 0
@@ -647,10 +678,6 @@ body {
 
 .welcome {
 
-    border-left:
-        4px solid
-        #d8c8ee;
-
     padding:
         10px 12px;
 
@@ -658,7 +685,7 @@ body {
         20px;
 
     border-radius:
-        0 8px 8px 0;
+        8px;
 
     font-size:
         13px;
@@ -816,12 +843,12 @@ body {
         translateY(-2px);
 
     border-color:
-        rgba(216, 200, 238, 0.75);
+        rgba(120, 225, 255, 0.85);
 
     box-shadow:
 
         0 5px 14px
-        rgba(216, 200, 238, 0.20),
+        rgba(80, 210, 255, 0.22),
 
         inset
         0 1px 0
@@ -887,7 +914,7 @@ body {
 .owner-text a:hover {
 
     color:
-        #d8c8ee;
+        #8eeaff;
 
     text-decoration:
         underline;
@@ -897,6 +924,7 @@ body {
 
 /* =========================================================
    JOIN BUTTON
+   Green intentionally retained
    ========================================================= */
 
 .join-button {
@@ -924,7 +952,7 @@ body {
 
     border:
         1px solid
-        #c5b2df;
+        #9bd900;
 
     font-size:
         14px;
@@ -941,14 +969,14 @@ body {
     box-shadow:
 
         0 2px 5px
-        rgba(216, 200, 238, 0.25);
+        rgba(168, 255, 0, 0.25);
 
     background:
 
         linear-gradient(
             135deg,
-            #d8c8ee 0%,
-            #9f8bbd 100%
+            #a8ff00 0%,
+            #72b900 100%
         );
 
     transition:
@@ -971,7 +999,7 @@ body {
     box-shadow:
 
         0 4px 10px
-        rgba(216, 200, 238, 0.40);
+        rgba(168,255,0,0.40);
 
 }
 
@@ -1041,12 +1069,12 @@ body {
 
     border:
         2px solid
-        #c5b2df;
+        #82e8ff;
 
     box-shadow:
 
         0 3px 10px
-        rgba(216, 200, 238, 0.25);
+        rgba(80, 220, 255, 0.25);
 
     background:
         #000000;
@@ -1100,7 +1128,7 @@ body {
     box-shadow:
 
         0 5px 15px
-        rgba(216, 200, 238, 0.35);
+        rgba(80, 220, 255, 0.35);
 
 }
 
@@ -1143,21 +1171,7 @@ body {
 }
 
 
-.credit-list {
-
-    font-size:
-        13px;
-
-    line-height:
-        1.8;
-
-    color:
-        #ffffff;
-
-}
-
-
-.credit-list a {
+.credits-made-by a {
 
     color:
         #ffffff;
@@ -1176,13 +1190,27 @@ body {
 }
 
 
-.credit-list a:hover {
+.credits-made-by a:hover {
 
     color:
-        #d8c8ee;
+        #8eeaff;
 
     text-decoration:
         underline;
+
+}
+
+
+.credit-list {
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+    color:
+        #ffffff;
 
 }
 
