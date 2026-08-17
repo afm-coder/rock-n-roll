@@ -1,19 +1,17 @@
 /* =========================================================
    ROCK AND ROLL CHESS CLUB
    COMPLETE STYLESHEET
-   ========================================================= */
+   ================================================= */
 
 
 /* =========================================================
    GLOBAL RESET
-   ========================================================= */
+   ================================================= */
 
 * {
 
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
 
 }
@@ -21,14 +19,12 @@
 
 /* =========================================================
    ANIMATED CSS ANGLE
-   ========================================================= */
+   ================================================= */
 
 @property --angle {
 
     syntax: "<angle>";
-
     initial-value: 0deg;
-
     inherits: false;
 
 }
@@ -36,15 +32,13 @@
 
 /* =========================================================
    HTML / BODY
-   ========================================================= */
+   ================================================= */
 
 html,
 body {
 
     width: 100%;
-
     margin: 0;
-
     padding: 0;
 
 }
@@ -73,18 +67,16 @@ body {
 
 /* =========================================================
    MAIN SIDEBAR
-   ========================================================= */
+   ================================================= */
 
 .sidebar {
 
     position: relative;
 
     width: 100%;
-
     max-width: 100%;
 
     margin: 0;
-
     padding: 15px;
 
     box-sizing: border-box;
@@ -92,13 +84,11 @@ body {
     color:
         #ffffff;
 
-
     border:
         6px solid transparent;
 
     border-radius:
         18px;
-
 
     background:
 
@@ -122,19 +112,16 @@ body {
 
         ) border-box;
 
-
     animation:
         rainbowBorder
         4s
         linear
         infinite;
 
-
     box-shadow:
 
         0 4px 15px
         rgba(120, 70, 180, 0.20);
-
 
     overflow:
         hidden;
@@ -173,7 +160,8 @@ body {
 
     position: relative;
 
-    z-index: 1;
+    z-index:
+        1;
 
 }
 
@@ -191,8 +179,8 @@ body {
 
         linear-gradient(
             135deg,
-            rgba(55, 43, 78, 0.88),
-            rgba(38, 29, 55, 0.92)
+            rgba(70, 55, 95, 0.72),
+            rgba(45, 35, 65, 0.78)
         );
 
     border-radius:
@@ -220,8 +208,14 @@ body {
         blur(12px);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+
+        transform
+        0.3s
+        ease,
+
+        box-shadow
+        0.3s
+        ease;
 
 }
 
@@ -240,7 +234,7 @@ body {
 
 
 /* =========================================================
-   CLUB LOGO / GUITAR
+   CLUB LOGO
    ========================================================= */
 
 .club-logo {
@@ -326,15 +320,23 @@ body {
 .byline a {
 
     color:
-        #dffbff;
+        #ffffff;
 
     text-decoration:
         none;
+
+    transition:
+        color
+        0.2s
+        ease;
 
 }
 
 
 .byline a:hover {
+
+    color:
+        #8eeaff;
 
     text-decoration:
         underline;
@@ -373,7 +375,8 @@ body {
 
 
 /* =========================================================
-   GLASS CARDS
+   GLASS MINI-DIVS
+   Lavender base
    ========================================================= */
 
 .welcome,
@@ -409,18 +412,21 @@ body {
         rgba(255, 255, 255, 0.45);
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.25s ease;
 
-    border-radius:
-        8px;
+        transform
+        0.3s
+        ease,
+
+        box-shadow
+        0.3s
+        ease;
 
 }
 
 
 /* =========================================================
    MINI-DIV HOVER
-   Same general hover effect as the header
+   Same style as the header
    ========================================================= */
 
 .welcome:hover,
@@ -434,7 +440,7 @@ body {
     box-shadow:
 
         0 12px 30px
-        rgba(0, 0, 0, 0.30),
+        rgba(0, 0, 0, 0.38),
 
         inset
         0 1px 0
@@ -510,6 +516,8 @@ body {
 
 /* =========================================================
    PROGRESS BAR
+   IMPORTANT:
+   This is kept from the known-working version.
    ========================================================= */
 
 .progress-bar {
@@ -550,6 +558,7 @@ body {
 
 /* =========================================================
    GREEN PROGRESS
+   KEEP THIS EXACTLY WORKING
    ========================================================= */
 
 .progress-fill {
@@ -665,6 +674,7 @@ body {
 
 /* =========================================================
    WELCOME
+   No coloured square/left strip
    ========================================================= */
 
 .welcome {
@@ -692,10 +702,6 @@ body {
 
 }
 
-
-/* =========================================================
-   WELCOME CONTENT
-   ========================================================= */
 
 .welcome div {
 
@@ -765,7 +771,8 @@ body {
 
 
 /* =========================================================
-   CLUB LINKS
+   BEST CLUB CARDS
+   Their own hover remains untouched
    ========================================================= */
 
 .club-link {
@@ -838,12 +845,12 @@ body {
         translateY(-2px);
 
     border-color:
-        rgba(120, 225, 245, 0.85);
+        rgba(120, 225, 255, 0.85);
 
     box-shadow:
 
         0 5px 14px
-        rgba(100, 225, 245, 0.20),
+        rgba(80, 210, 255, 0.22),
 
         inset
         0 1px 0
@@ -890,7 +897,7 @@ body {
 .owner-text a {
 
     color:
-        #dffbff;
+        #ffffff;
 
     text-decoration:
         none;
@@ -909,7 +916,7 @@ body {
 .owner-text a:hover {
 
     color:
-        #9eeeff;
+        #8eeaff;
 
     text-decoration:
         underline;
@@ -919,7 +926,7 @@ body {
 
 /* =========================================================
    JOIN BUTTON
-   Lavender — deliberately NOT cyan
+   LAVENDER — intentionally NOT cyan
    ========================================================= */
 
 .join-button {
@@ -947,7 +954,7 @@ body {
 
     border:
         1px solid
-        #d8c8f5;
+        #c9b9e8;
 
     font-size:
         14px;
@@ -964,17 +971,18 @@ body {
     box-shadow:
 
         0 2px 5px
-        rgba(190, 169, 225, 0.35);
+        rgba(190, 169, 225, 0.30);
 
     background:
 
         linear-gradient(
             135deg,
             #c9b9e8 0%,
-            #9f8bc4 100%
+            #927fb8 100%
         );
 
     transition:
+
         transform
         0.35s
         cubic-bezier(0.4,0,0.2,1),
@@ -994,7 +1002,7 @@ body {
     box-shadow:
 
         0 4px 10px
-        rgba(190, 169, 225, 0.50);
+        rgba(190, 169, 225, 0.45);
 
 }
 
@@ -1043,6 +1051,7 @@ body {
 
 /* =========================================================
    YOUTUBE PLAYER
+   CYAN ACCENT
    ========================================================= */
 
 .youtube-player {
@@ -1064,12 +1073,12 @@ body {
 
     border:
         2px solid
-        #78e8ff;
+        #82e8ff;
 
     box-shadow:
 
         0 3px 10px
-        rgba(100, 225, 245, 0.25);
+        rgba(80, 220, 255, 0.25);
 
     background:
         #000000;
@@ -1123,7 +1132,7 @@ body {
     box-shadow:
 
         0 5px 15px
-        rgba(100, 225, 245, 0.35);
+        rgba(80, 220, 255, 0.35);
 
 }
 
@@ -1166,24 +1175,10 @@ body {
 }
 
 
-.credit-list {
-
-    font-size:
-        13px;
-
-    line-height:
-        1.8;
+.credits-made-by a {
 
     color:
         #ffffff;
-
-}
-
-
-.credit-list a {
-
-    color:
-        #dffbff;
 
     text-decoration:
         none;
@@ -1199,13 +1194,31 @@ body {
 }
 
 
-.credit-list a:hover {
+.credits-made-by a:hover {
 
     color:
-        #9eeeff;
+        #8eeaff;
 
     text-decoration:
         underline;
+
+}
+
+
+/* =========================================================
+   CREDIT LIST
+   ========================================================= */
+
+.credit-list {
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+    color:
+        #ffffff;
 
 }
 
@@ -1240,6 +1253,7 @@ body {
 
 /* =========================================================
    SPARKLES
+   LIME REMAINS HERE INTENTIONALLY
    ========================================================= */
 
 #sparkles {
