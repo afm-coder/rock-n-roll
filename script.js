@@ -1,7 +1,7 @@
 /* =========================================================
    ROCK AND ROLL CHESS CLUB
    COMPLETE JAVASCRIPT
-   ================================================= */
+   ========================================================= */
 
 
 /* =========================================================
@@ -43,7 +43,13 @@ const progressPercentage =
 
 const progressCurrent =
     document.getElementById(
-        "progress-current"
+        "current-members"
+    );
+
+
+const progressGoal =
+    document.getElementById(
+        "member-goal"
     );
 
 
@@ -54,15 +60,26 @@ const progressCurrent =
 async function loadMemberCount() {
 
 
+    /* =====================================================
+       CHECK THAT ELEMENTS EXIST
+       ===================================================== */
+
     if (
+
         !memberCountElement ||
+
         !progressFill ||
+
         !progressPercentage ||
-        !progressCurrent
+
+        !progressCurrent ||
+
+        !progressGoal
+
     ) {
 
         console.error(
-            "ROCK AND ROLL: Member progress elements were not found."
+            "ROCK AND ROLL: One or more member progress elements were not found."
         );
 
         return;
@@ -94,6 +111,7 @@ async function loadMemberCount() {
 
         /* =================================================
            CACHE BUSTING
+           Prevents GitHub Pages from serving an old JSON
            ================================================= */
 
         membersURL.searchParams.set(
@@ -103,7 +121,7 @@ async function loadMemberCount() {
 
 
         console.log(
-            "ROCK AND ROLL: Loading:",
+            "ROCK AND ROLL: Loading member data from:",
             membersURL.href
         );
 
@@ -118,6 +136,7 @@ async function loadMemberCount() {
                 membersURL.href,
 
                 {
+
                     method:
                         "GET",
 
@@ -182,7 +201,7 @@ async function loadMemberCount() {
 
 
         /* =================================================
-           CURRENT MEMBER COUNT
+           GET CURRENT MEMBER COUNT
            ================================================= */
 
         const memberCount =
@@ -190,7 +209,7 @@ async function loadMemberCount() {
 
 
         /* =================================================
-           CALCULATE PERCENTAGE
+           CALCULATE PROGRESS
            ================================================= */
 
         let percentage =
@@ -201,13 +220,19 @@ async function loadMemberCount() {
 
 
         /* =================================================
-           DON'T LET BAR EXCEED 100%
+           KEEP PROGRESS BETWEEN 0 AND 100
            ================================================= */
 
         percentage =
-            Math.min(
-                percentage,
-                100
+            Math.max(
+
+                0,
+
+                Math.min(
+                    percentage,
+                    100
+                )
+
             );
 
 
@@ -220,7 +245,8 @@ async function loadMemberCount() {
 
 
         /* =================================================
-           DISPLAY CURRENT COUNT BELOW BAR
+           DISPLAY CURRENT MEMBER COUNT
+           BELOW BAR
            ================================================= */
 
         progressCurrent.textContent =
@@ -228,28 +254,11 @@ async function loadMemberCount() {
 
 
         /* =================================================
-           DISPLAY NEXT GOAL
+           DISPLAY MEMBER GOAL
            ================================================= */
 
-        const progressLabels =
-            document.querySelector(
-                ".progress-labels"
-            );
-
-
-        if (progressLabels) {
-
-            const goalElement =
-                progressLabels.children[1];
-
-            if (goalElement) {
-
-                goalElement.textContent =
-                    NEXT_MEMBER_GOAL;
-
-            }
-
-        }
+        progressGoal.textContent =
+            NEXT_MEMBER_GOAL;
 
 
         /* =================================================
@@ -261,15 +270,17 @@ async function loadMemberCount() {
 
 
         /* =================================================
-           UPDATE PERCENTAGE TEXT
+           UPDATE PERCENTAGE
            ================================================= */
 
         progressPercentage.textContent =
-            Math.round(percentage) + "%";
+            Math.round(
+                percentage
+            ) + "%";
 
 
         /* =================================================
-           LOG SUCCESS
+           SUCCESS LOG
            ================================================= */
 
         console.log(
@@ -280,7 +291,9 @@ async function loadMemberCount() {
 
         console.log(
             "ROCK AND ROLL: Progress:",
-            Math.round(percentage) + "%"
+            Math.round(
+                percentage
+            ) + "%"
         );
 
 
@@ -300,11 +313,12 @@ async function loadMemberCount() {
 
 
         memberCountElement.textContent =
-            "⚠️ Error";
+            "⚠️ Error loading members";
 
 
         progressPercentage.textContent =
             "Error";
+
 
     }
 
