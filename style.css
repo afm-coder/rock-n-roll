@@ -1,1 +1,1312 @@
+/* =========================================================
+   CROISSANT CLUB
+   COMPLETE STYLESHEET
+   ================================================= */
 
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   ANIMATED CSS ANGLE
+   ========================================================= */
+
+@property --angle {
+
+    syntax: "<angle>";
+
+    initial-value: 0deg;
+
+    inherits: false;
+
+}
+
+
+/* =========================================================
+   HTML / BODY
+   ========================================================= */
+
+html,
+body {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+body {
+
+    font-family:
+        'Segoe UI',
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    color:
+        #5c3a21;
+
+    background:
+        transparent;
+
+    overflow-x:
+        hidden;
+
+}
+
+
+/* =========================================================
+   MAIN SIDEBAR
+   ========================================================= */
+
+.sidebar {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    color:
+        #5c3a21;
+
+
+    border:
+        6px solid transparent;
+
+    border-radius:
+        18px;
+
+
+    background:
+
+        linear-gradient(
+            rgba(253, 248, 242, 0.94),
+            rgba(253, 248, 242, 0.94)
+        ) padding-box,
+
+        conic-gradient(
+            from var(--angle),
+
+            #ff3b30,
+            #ff9500,
+            #ffcc00,
+            #34c759,
+            #00c7ff,
+            #5856d6,
+            #af52de,
+            #ff2d55,
+            #ff3b30
+
+        ) border-box;
+
+
+    animation:
+
+        rainbowBorder
+        4s
+        linear
+        infinite;
+
+
+    box-shadow:
+
+        0 4px 15px
+        rgba(230, 168, 23, 0.15);
+
+
+    overflow:
+        hidden;
+
+}
+
+
+/* =========================================================
+   RAINBOW BORDER ROTATION
+   ========================================================= */
+
+@keyframes rainbowBorder {
+
+    from {
+
+        --angle:
+            0deg;
+
+    }
+
+    to {
+
+        --angle:
+            360deg;
+
+    }
+
+}
+
+
+/* =========================================================
+   SIDEBAR CONTENT
+   ========================================================= */
+
+.sidebar-content {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+
+    text-align:
+        center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e6a817 0%,
+            #b87333 100%
+        );
+
+    padding:
+        20px 10px;
+
+    border-radius:
+        8px;
+
+    margin-bottom:
+        20px;
+
+    box-shadow:
+
+        inset
+        0 0 10px
+        rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* =========================================================
+   CLUB LOGO
+   ========================================================= */
+
+.club-logo {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    width:
+        100%;
+
+    margin:
+        0 auto 10px auto;
+
+}
+
+
+.club-logo {
+
+    font-size:
+        70px;
+
+    line-height:
+        1;
+
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.header h2 {
+
+    margin:
+        0;
+
+    color:
+        #ffffff;
+
+    font-size:
+        22px;
+
+    font-weight:
+        800;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.5px;
+
+    text-shadow:
+
+        1px 2px 4px
+        rgba(92, 58, 33, 0.4);
+
+}
+
+
+/* =========================================================
+   BYLINE
+   ========================================================= */
+
+.byline {
+
+    margin:
+        10px 0 0 0;
+
+}
+
+
+.byline span {
+
+    font-family:
+        'Segoe UI',
+        sans-serif;
+
+    color:
+        #ffffff;
+
+    font-size:
+        12px;
+
+}
+
+
+.byline a {
+
+    color:
+        #ffffff;
+
+    text-decoration:
+        none;
+
+}
+
+
+.byline a:hover {
+
+    text-decoration:
+        underline;
+
+}
+
+
+/* =========================================================
+   HEADER SUBTITLE
+   ========================================================= */
+
+.header-subtitle {
+
+    margin:
+        5px 0 0 0;
+
+    color:
+        #faebd7;
+
+    font-size:
+        11px;
+
+    font-style:
+        italic;
+
+    letter-spacing:
+        0.5px;
+
+    text-align:
+        center;
+
+    width:
+        100%;
+
+}
+
+
+/* =========================================================
+   GLASS CARDS
+   ========================================================= */
+
+.stats,
+.welcome,
+.owners,
+.radio,
+.credits {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.48),
+            rgba(255, 255, 255, 0.20)
+        );
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+
+        0 4px 14px
+        rgba(92, 58, 33, 0.10),
+
+        inset
+        0 1px 0
+        rgba(255, 255, 255, 0.55);
+
+    transition:
+        box-shadow
+        0.25s
+        ease;
+
+}
+
+
+.stats:hover,
+.welcome:hover,
+.owners:hover,
+.radio:hover,
+.credits:hover {
+
+    box-shadow:
+
+        0 6px 18px
+        rgba(92, 58, 33, 0.15),
+
+        inset
+        0 1px 0
+        rgba(255, 255, 255, 0.65);
+
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.stats {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        stretch;
+
+    margin-bottom:
+        20px;
+
+    border-radius:
+        8px;
+
+    overflow:
+        hidden;
+
+}
+
+
+.stat-box {
+
+    width:
+        50%;
+
+    text-align:
+        center;
+
+    padding:
+        10px 5px;
+
+}
+
+
+.stat-box:first-child {
+
+    border-right:
+        1px solid
+        rgba(212, 178, 140, 0.6);
+
+}
+
+
+.stat-title {
+
+    border-bottom:
+        1px solid
+        rgba(240, 224, 207, 0.8);
+
+    padding-bottom:
+        6px;
+
+    margin-bottom:
+        6px;
+
+    font-size:
+        9px;
+
+    white-space:
+        nowrap;
+
+    text-transform:
+        uppercase;
+
+    color:
+        #8c7662;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        0.3px;
+
+}
+
+
+.stat-number {
+
+    font-size:
+        18px;
+
+    font-weight:
+        bold;
+
+    color:
+        #5c3a21;
+
+}
+
+
+.stat-number.cheers {
+
+    color:
+        #e6a817;
+
+}
+
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+.welcome {
+
+    border-left:
+        4px solid
+        #e6a817;
+
+    padding:
+        10px 12px;
+
+    margin-bottom:
+        20px;
+
+    border-radius:
+        0 8px 8px 0;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+
+    text-align:
+        center;
+
+    width:
+        100%;
+
+}
+
+
+.welcome div {
+
+    width:
+        100%;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        5px;
+
+}
+
+
+.welcome div:last-child {
+
+    margin-bottom:
+        0;
+
+}
+
+
+/* =========================================================
+   BEST CLUB
+   ========================================================= */
+
+.best-club {
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.best-club h3 {
+
+    margin:
+        0 0 12px 0;
+
+    font-size:
+        16px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+
+    color:
+        #8c7662;
+
+    font-weight:
+        900;
+
+    border-bottom:
+        1px solid
+        #f0e0cf;
+
+    padding-bottom:
+        7px;
+
+    text-align:
+        center;
+
+}
+
+
+/* =========================================================
+   CLUB LINKS
+   ========================================================= */
+
+.club-link {
+
+    display:
+        block;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.55),
+            rgba(255, 255, 255, 0.25)
+        );
+
+    backdrop-filter:
+        blur(6px);
+
+    -webkit-backdrop-filter:
+        blur(6px);
+
+    color:
+        #5c3a21;
+
+    text-decoration:
+        none;
+
+    padding:
+        10px 12px;
+
+    margin-bottom:
+        8px;
+
+    border-radius:
+        6px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.55);
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    text-align:
+        center;
+
+    box-shadow:
+
+        0 3px 10px
+        rgba(92, 58, 33, 0.07),
+
+        inset
+        0 1px 0
+        rgba(255, 255, 255, 0.5);
+
+    transition:
+        all
+        0.25s
+        ease;
+
+}
+
+
+.club-link:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(230, 168, 23, 0.7);
+
+    box-shadow:
+
+        0 5px 14px
+        rgba(230, 168, 23, 0.18),
+
+        inset
+        0 1px 0
+        rgba(255, 255, 255, 0.7);
+
+}
+
+
+/* =========================================================
+   OWNERS
+   ========================================================= */
+
+.owners {
+
+    padding:
+        12px;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        15px;
+
+    border-radius:
+        8px;
+
+}
+
+
+.owner-text {
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+    color:
+        #5c3a21;
+
+}
+
+
+.owner-text a {
+
+    color:
+        #b87333;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        bold;
+
+    transition:
+        color
+        0.2s
+        ease;
+
+}
+
+
+.owner-text a:hover {
+
+    color:
+        #e6a817;
+
+    text-decoration:
+        underline;
+
+}
+
+
+/* =========================================================
+   JOIN BUTTON
+   ========================================================= */
+
+.join-button {
+
+    display:
+        block;
+
+    margin:
+        12px auto 2px auto;
+
+    width:
+        85%;
+
+    padding:
+        9px 12px;
+
+    color:
+        #5c3a21;
+
+    text-decoration:
+        none;
+
+    border-radius:
+        7px;
+
+    border:
+        1px solid
+        #d49a0a;
+
+    font-size:
+        14px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1px;
+
+    text-align:
+        center;
+
+    box-shadow:
+
+        0 2px 5px
+        rgba(230, 168, 23, 0.25);
+
+    background-color:
+        #e6a817;
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(255,230,92,1) 0%,
+            rgba(255,205,55,1) 50%,
+            rgba(255,230,92,0) 50%,
+            rgba(255,230,92,0) 100%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f2c94c 0%,
+            #e6a817 100%
+        );
+
+    background-size:
+
+        200% 100%,
+        100% 100%;
+
+    background-position:
+
+        100% 0,
+        0 0;
+
+    background-repeat:
+        no-repeat;
+
+    transition:
+
+        background-position
+        0.6s
+        cubic-bezier(0.4,0,0.2,1),
+
+        transform
+        0.35s
+        cubic-bezier(0.4,0,0.2,1),
+
+        box-shadow
+        0.35s
+        cubic-bezier(0.4,0,0.2,1);
+
+}
+
+
+.join-button:hover {
+
+    background-position:
+
+        0% 0,
+        0 0;
+
+    transform:
+        scale(1.11);
+
+    box-shadow:
+
+        0 4px 10px
+        rgba(230,168,23,0.4);
+
+}
+
+
+/* =========================================================
+   RADIO
+   ========================================================= */
+
+.radio {
+
+    padding:
+        12px;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        15px;
+
+    border-radius:
+        8px;
+
+}
+
+
+/* =========================================================
+   RADIO TITLE
+   ========================================================= */
+
+.section-title {
+
+    font-size:
+        13px;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        9px;
+
+    color:
+        #8c7662;
+
+}
+
+
+/* =========================================================
+   YOUTUBE PLAYER
+   ========================================================= */
+
+.youtube-player {
+
+    width:
+        100%;
+
+    max-width:
+        240px;
+
+    margin:
+        0 auto;
+
+    border-radius:
+        10px;
+
+    overflow:
+        hidden;
+
+    border:
+        2px solid
+        #d49a0a;
+
+    box-shadow:
+
+        0 3px 10px
+        rgba(230, 168, 23, 0.25);
+
+    background:
+        #000;
+
+    transition:
+
+        transform
+        0.25s
+        ease,
+
+        box-shadow
+        0.25s
+        ease;
+
+}
+
+
+/* =========================================================
+   YOUTUBE IFRAME
+   ========================================================= */
+
+.youtube-player iframe {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        16 / 9;
+
+    height:
+        auto;
+
+    border:
+        0;
+
+}
+
+
+/* =========================================================
+   YOUTUBE PLAYER HOVER
+   ========================================================= */
+
+.youtube-player:hover {
+
+    transform:
+        scale(1.03);
+
+    box-shadow:
+
+        0 5px 15px
+        rgba(230, 168, 23, 0.35);
+
+}
+
+
+/* =========================================================
+   CREDITS
+   ========================================================= */
+
+.credits {
+
+    padding:
+        12px;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        15px;
+
+    border-radius:
+        8px;
+
+}
+
+
+.credits-made-by {
+
+    font-size:
+        13px;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        9px;
+
+    color:
+        #8c7662;
+
+}
+
+
+.credit-list {
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+
+    color:
+        #5c3a21;
+
+}
+
+
+.credit-list a {
+
+    color:
+        #b87333;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        bold;
+
+    transition:
+        color
+        0.2s
+        ease;
+
+}
+
+
+.credit-list a:hover {
+
+    color:
+        #e6a817;
+
+    text-decoration:
+        underline;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+
+    text-align:
+        center;
+
+    font-size:
+        10px;
+
+    color:
+        #a69280;
+
+    margin-top:
+        15px;
+
+    border-top:
+        1px solid
+        #f0e0cf;
+
+    padding-top:
+        10px;
+
+}
+
+
+/* =========================================================
+   GOLDEN SPARKLES
+   ========================================================= */
+
+#sparkles {
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    pointer-events:
+        none;
+
+    overflow:
+        hidden;
+
+    z-index:
+        9999;
+
+}
+
+
+.sparkle {
+
+    position:
+        absolute;
+
+    display:
+        block;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    color:
+        #ffd700;
+
+    font-family:
+
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        10px;
+
+    line-height:
+        1;
+
+    font-weight:
+        normal;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    user-select:
+        none;
+
+    transform-origin:
+        center center;
+
+    text-shadow:
+
+        0 0 3px
+        rgba(255, 215, 0, 1),
+
+        0 0 6px
+        rgba(255, 200, 0, 0.95),
+
+        0 0 11px
+        rgba(255, 180, 0, 0.7);
+
+    animation:
+
+        sparkleAppear
+        var(--duration)
+        ease-in-out
+        forwards;
+
+}
+
+
+/* =========================================================
+   SPARKLE ANIMATION
+   ========================================================= */
+
+@keyframes sparkleAppear {
+
+    0% {
+
+        opacity:
+            0;
+
+        transform:
+
+            scale(0.15)
+            rotate(0deg);
+
+    }
+
+    20% {
+
+        opacity:
+            0.55;
+
+        transform:
+
+            scale(0.65)
+            rotate(30deg);
+
+    }
+
+    40% {
+
+        opacity:
+            1;
+
+        transform:
+
+            scale(1)
+            rotate(60deg);
+
+    }
+
+    60% {
+
+        opacity:
+            0.95;
+
+        transform:
+
+            scale(0.95)
+            rotate(90deg);
+
+    }
+
+    80% {
+
+        opacity:
+            0.55;
+
+        transform:
+
+            scale(0.7)
+            rotate(120deg);
+
+    }
+
+    100% {
+
+        opacity:
+            0;
+
+        transform:
+
+            scale(0.15)
+            rotate(160deg);
+
+    }
+
+}
