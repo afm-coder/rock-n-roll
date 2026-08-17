@@ -1,17 +1,349 @@
 /* =========================================================
-   CROISSANT CLUB
+   ROCK AND ROLL CHESS CLUB
    COMPLETE JAVASCRIPT
    ================================================= */
 
 
 /* =========================================================
-   GOLDEN SPARKLE SYSTEM
-   ================================================= */
+   MEMBER PROGRESS SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   SETTINGS
+   ========================================================= */
+
+const NEXT_MEMBER_GOAL = 20;
+
+const MEMBER_REFRESH_INTERVAL =
+    60 * 60 * 1000;
+
+
+/* =========================================================
+   FIND MEMBER ELEMENTS
+   ========================================================= */
+
+const memberCountElement =
+    document.getElementById(
+        "member-count"
+    );
+
+
+const progressFill =
+    document.getElementById(
+        "progress-fill"
+    );
+
+
+const progressPercentage =
+    document.getElementById(
+        "progress-percentage"
+    );
+
+
+const progressCurrent =
+    document.getElementById(
+        "progress-current"
+    );
+
+
+/* =========================================================
+   LOAD MEMBER COUNT
+   ========================================================= */
+
+async function loadMemberCount() {
+
+
+    if (
+        !memberCountElement ||
+        !progressFill ||
+        !progressPercentage ||
+        !progressCurrent
+    ) {
+
+        console.error(
+            "ROCK AND ROLL: Member progress elements were not found."
+        );
+
+        return;
+
+    }
+
+
+    /* =====================================================
+       LOADING STATE
+       ===================================================== */
+
+    memberCountElement.textContent =
+        "Loading... 🎸";
+
+
+    try {
+
+
+        /* =================================================
+           BUILD MEMBERS.JSON URL
+           ================================================= */
+
+        const membersURL =
+            new URL(
+                "members.json",
+                window.location.href
+            );
+
+
+        /* =================================================
+           CACHE BUSTING
+           ================================================= */
+
+        membersURL.searchParams.set(
+            "cache",
+            Date.now()
+        );
+
+
+        console.log(
+            "ROCK AND ROLL: Loading:",
+            membersURL.href
+        );
+
+
+        /* =================================================
+           FETCH MEMBERS.JSON
+           ================================================= */
+
+        const response =
+            await fetch(
+
+                membersURL.href,
+
+                {
+                    method:
+                        "GET",
+
+                    cache:
+                        "no-store",
+
+                    headers: {
+
+                        "Cache-Control":
+                            "no-cache"
+
+                    }
+
+                }
+
+            );
+
+
+        /* =================================================
+           CHECK RESPONSE
+           ================================================= */
+
+        if (!response.ok) {
+
+            throw new Error(
+
+                "Could not load members.json. HTTP " +
+                response.status
+
+            );
+
+        }
+
+
+        /* =================================================
+           READ JSON
+           ================================================= */
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "ROCK AND ROLL: members.json returned:",
+            data
+        );
+
+
+        /* =================================================
+           VALIDATE MEMBER COUNT
+           ================================================= */
+
+        if (
+            typeof data.members !== "number"
+        ) {
+
+            throw new Error(
+                "members.json does not contain a valid 'members' number."
+            );
+
+        }
+
+
+        /* =================================================
+           CURRENT MEMBER COUNT
+           ================================================= */
+
+        const memberCount =
+            data.members;
+
+
+        /* =================================================
+           CALCULATE PERCENTAGE
+           ================================================= */
+
+        let percentage =
+            (
+                memberCount /
+                NEXT_MEMBER_GOAL
+            ) * 100;
+
+
+        /* =================================================
+           DON'T LET BAR EXCEED 100%
+           ================================================= */
+
+        percentage =
+            Math.min(
+                percentage,
+                100
+            );
+
+
+        /* =================================================
+           DISPLAY MEMBER COUNT
+           ================================================= */
+
+        memberCountElement.textContent =
+            memberCount + " 🎸";
+
+
+        /* =================================================
+           DISPLAY CURRENT COUNT BELOW BAR
+           ================================================= */
+
+        progressCurrent.textContent =
+            memberCount;
+
+
+        /* =================================================
+           DISPLAY NEXT GOAL
+           ================================================= */
+
+        const progressLabels =
+            document.querySelector(
+                ".progress-labels"
+            );
+
+
+        if (progressLabels) {
+
+            const goalElement =
+                progressLabels.children[1];
+
+            if (goalElement) {
+
+                goalElement.textContent =
+                    NEXT_MEMBER_GOAL;
+
+            }
+
+        }
+
+
+        /* =================================================
+           UPDATE PROGRESS BAR
+           ================================================= */
+
+        progressFill.style.width =
+            percentage + "%";
+
+
+        /* =================================================
+           UPDATE PERCENTAGE TEXT
+           ================================================= */
+
+        progressPercentage.textContent =
+            Math.round(percentage) + "%";
+
+
+        /* =================================================
+           LOG SUCCESS
+           ================================================= */
+
+        console.log(
+            "ROCK AND ROLL: Member count updated to",
+            memberCount
+        );
+
+
+        console.log(
+            "ROCK AND ROLL: Progress:",
+            Math.round(percentage) + "%"
+        );
+
+
+    }
+
+    catch (error) {
+
+
+        /* =================================================
+           ERROR HANDLING
+           ================================================= */
+
+        console.error(
+            "ROCK AND ROLL: Could not load member count.",
+            error
+        );
+
+
+        memberCountElement.textContent =
+            "⚠️ Error";
+
+
+        progressPercentage.textContent =
+            "Error";
+
+    }
+
+}
+
+
+/* =========================================================
+   INITIAL MEMBER LOAD
+   ========================================================= */
+
+loadMemberCount();
+
+
+/* =========================================================
+   REFRESH MEMBER COUNT
+   EVERY HOUR
+   ========================================================= */
+
+setInterval(
+
+    function () {
+
+        loadMemberCount();
+
+    },
+
+    MEMBER_REFRESH_INTERVAL
+
+);
+
+
+/* =========================================================
+   GOLDEN / LIME SPARKLE SYSTEM
+   ========================================================= */
 
 
 /* =========================================================
    FIND SPARKLE CONTAINER
-   ================================================= */
+   ========================================================= */
 
 const sparkleContainer =
     document.getElementById(
@@ -20,8 +352,8 @@ const sparkleContainer =
 
 
 /* =========================================================
-   MAKE SURE THE CONTAINER EXISTS
-   ================================================= */
+   MAKE SURE CONTAINER EXISTS
+   ========================================================= */
 
 if (sparkleContainer) {
 
@@ -76,10 +408,14 @@ if (sparkleContainer) {
 
         sparkle.textContent =
             sparkleTypes[
+
                 Math.floor(
+
                     Math.random() *
                     sparkleTypes.length
+
                 )
+
             ];
 
 
