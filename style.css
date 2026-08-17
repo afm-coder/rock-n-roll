@@ -649,7 +649,7 @@ body {
 
     border-left:
         4px solid
-        #a8ff00;
+        #d8c8ee;
 
     padding:
         10px 12px;
@@ -816,12 +816,12 @@ body {
         translateY(-2px);
 
     border-color:
-        rgba(168, 255, 0, 0.75);
+        rgba(216, 200, 238, 0.75);
 
     box-shadow:
 
         0 5px 14px
-        rgba(168, 255, 0, 0.20),
+        rgba(216, 200, 238, 0.20),
 
         inset
         0 1px 0
@@ -887,7 +887,7 @@ body {
 .owner-text a:hover {
 
     color:
-        #a8ff00;
+        #d8c8ee;
 
     text-decoration:
         underline;
@@ -924,7 +924,7 @@ body {
 
     border:
         1px solid
-        #9bd900;
+        #c5b2df;
 
     font-size:
         14px;
@@ -941,14 +941,14 @@ body {
     box-shadow:
 
         0 2px 5px
-        rgba(168, 255, 0, 0.25);
+        rgba(216, 200, 238, 0.25);
 
     background:
 
         linear-gradient(
             135deg,
-            #a8ff00 0%,
-            #72b900 100%
+            #d8c8ee 0%,
+            #9f8bbd 100%
         );
 
     transition:
@@ -971,7 +971,7 @@ body {
     box-shadow:
 
         0 4px 10px
-        rgba(168,255,0,0.40);
+        rgba(216, 200, 238, 0.40);
 
 }
 
@@ -1041,12 +1041,12 @@ body {
 
     border:
         2px solid
-        #9bd900;
+        #c5b2df;
 
     box-shadow:
 
         0 3px 10px
-        rgba(168, 255, 0, 0.25);
+        rgba(216, 200, 238, 0.25);
 
     background:
         #000000;
@@ -1100,7 +1100,7 @@ body {
     box-shadow:
 
         0 5px 15px
-        rgba(168, 255, 0, 0.35);
+        rgba(216, 200, 238, 0.35);
 
 }
 
@@ -1179,7 +1179,7 @@ body {
 .credit-list a:hover {
 
     color:
-        #a8ff00;
+        #d8c8ee;
 
     text-decoration:
         underline;
