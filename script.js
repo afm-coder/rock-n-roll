@@ -1,17 +1,17 @@
 /* =========================================================
    ROCK AND ROLL CHESS CLUB
    COMPLETE JAVASCRIPT
-   ========================================================= */
+   ================================================= */
 
 
 /* =========================================================
    MEMBER PROGRESS SYSTEM
-   ========================================================= */
+   ================================================= */
 
 
 /* =========================================================
    SETTINGS
-   ========================================================= */
+   ================================================= */
 
 const NEXT_MEMBER_GOAL = 20;
 
@@ -21,7 +21,7 @@ const MEMBER_REFRESH_INTERVAL =
 
 /* =========================================================
    FIND MEMBER ELEMENTS
-   ========================================================= */
+   ================================================= */
 
 const memberCountElement =
     document.getElementById(
@@ -47,12 +47,6 @@ const progressCurrent =
     );
 
 
-const progressGoal =
-    document.getElementById(
-        "member-goal"
-    );
-
-
 /* =========================================================
    LOAD MEMBER COUNT
    ========================================================= */
@@ -72,14 +66,12 @@ async function loadMemberCount() {
 
         !progressPercentage ||
 
-        !progressCurrent ||
-
-        !progressGoal
+        !progressCurrent
 
     ) {
 
         console.error(
-            "ROCK AND ROLL: One or more member progress elements were not found."
+            "ROCK AND ROLL: Member progress elements were not found."
         );
 
         return;
@@ -111,7 +103,6 @@ async function loadMemberCount() {
 
         /* =================================================
            CACHE BUSTING
-           Prevents GitHub Pages from serving an old JSON
            ================================================= */
 
         membersURL.searchParams.set(
@@ -136,7 +127,6 @@ async function loadMemberCount() {
                 membersURL.href,
 
                 {
-
                     method:
                         "GET",
 
@@ -246,19 +236,11 @@ async function loadMemberCount() {
 
         /* =================================================
            DISPLAY CURRENT MEMBER COUNT
-           BELOW BAR
+           LEFT OF BAR
            ================================================= */
 
         progressCurrent.textContent =
             memberCount;
-
-
-        /* =================================================
-           DISPLAY MEMBER GOAL
-           ================================================= */
-
-        progressGoal.textContent =
-            NEXT_MEMBER_GOAL;
 
 
         /* =================================================
@@ -333,8 +315,8 @@ loadMemberCount();
 
 
 /* =========================================================
-   REFRESH MEMBER COUNT
-   EVERY HOUR
+   REFRESH MEMBER DATA
+   EVERY HOUR WHILE PAGE IS OPEN
    ========================================================= */
 
 setInterval(
