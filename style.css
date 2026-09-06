@@ -1,51 +1,44 @@
+```css
 /* =========================================================
    ROCK AND ROLL CHESS CLUB
    COMPLETE STYLESHEET
-   ================================================= */
+   ========================================================= */
 
 
 /* =========================================================
    GLOBAL RESET
-   ================================================= */
+   ========================================================= */
 
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 
 /* =========================================================
    ANIMATED CSS ANGLE
-   ================================================= */
+   ========================================================= */
 
 @property --angle {
-
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
-
 }
 
 
 /* =========================================================
    HTML / BODY
-   ================================================= */
+   ========================================================= */
 
 html,
 body {
-
     width: 100%;
     margin: 0;
     padding: 0;
-
 }
 
-
 body {
-
     font-family:
         'Segoe UI',
         Roboto,
@@ -61,16 +54,14 @@ body {
 
     overflow-x:
         hidden;
-
 }
 
 
 /* =========================================================
    MAIN SIDEBAR
-   ================================================= */
+   ========================================================= */
 
 .sidebar {
-
     position: relative;
 
     width: 100%;
@@ -119,13 +110,11 @@ body {
         infinite;
 
     box-shadow:
-
         0 4px 15px
         rgba(120, 70, 180, 0.20);
 
     overflow:
         hidden;
-
 }
 
 
@@ -136,17 +125,13 @@ body {
 @keyframes rainbowBorder {
 
     from {
-
         --angle:
             0deg;
-
     }
 
     to {
-
         --angle:
             360deg;
-
     }
 
 }
@@ -157,12 +142,10 @@ body {
    ========================================================= */
 
 .sidebar-content {
-
     position: relative;
 
     z-index:
         1;
-
 }
 
 
@@ -171,7 +154,6 @@ body {
    ========================================================= */
 
 .header {
-
     text-align:
         center;
 
@@ -197,7 +179,6 @@ body {
         rgba(210, 190, 235, 0.22);
 
     box-shadow:
-
         0 8px 25px
         rgba(0, 0, 0, 0.28);
 
@@ -216,7 +197,6 @@ body {
         box-shadow
         0.3s
         ease;
-
 }
 
 
@@ -226,10 +206,8 @@ body {
         translateY(-2px);
 
     box-shadow:
-
         0 12px 30px
         rgba(0, 0, 0, 0.38);
-
 }
 
 
@@ -238,7 +216,6 @@ body {
    ========================================================= */
 
 .club-logo {
-
     font-size:
         38px;
 
@@ -249,12 +226,10 @@ body {
         5px;
 
     filter:
-
         drop-shadow(
             0 2px 4px
             rgba(0, 0, 0, 0.25)
         );
-
 }
 
 
@@ -263,7 +238,6 @@ body {
    ========================================================= */
 
 .header h2 {
-
     margin:
         0;
 
@@ -283,10 +257,8 @@ body {
         1.5px;
 
     text-shadow:
-
         1px 2px 4px
         rgba(0, 0, 0, 0.45);
-
 }
 
 
@@ -295,15 +267,11 @@ body {
    ========================================================= */
 
 .byline {
-
     margin:
         10px 0 0 0;
-
 }
 
-
 .byline span {
-
     font-family:
         'Segoe UI',
         sans-serif;
@@ -313,12 +281,9 @@ body {
 
     font-size:
         12px;
-
 }
 
-
 .byline a {
-
     color:
         #ffffff;
 
@@ -329,18 +294,14 @@ body {
         color
         0.2s
         ease;
-
 }
 
-
 .byline a:hover {
-
     color:
         #8eeaff;
 
     text-decoration:
         underline;
-
 }
 
 
@@ -349,7 +310,6 @@ body {
    ========================================================= */
 
 .header-subtitle {
-
     margin:
         5px 0 0 0;
 
@@ -370,7 +330,6 @@ body {
 
     width:
         100%;
-
 }
 
 
@@ -420,7 +379,6 @@ body {
         box-shadow
         0.3s
         ease;
-
 }
 
 
@@ -445,7 +403,6 @@ body {
         inset
         0 1px 0
         rgba(255, 255, 255, 0.65);
-
 }
 
 
@@ -454,7 +411,6 @@ body {
    ========================================================= */
 
 .member-progress {
-
     width:
         90%;
 
@@ -466,7 +422,6 @@ body {
 
     text-align:
         center;
-
 }
 
 
@@ -495,10 +450,8 @@ body {
         center;
 
     text-shadow:
-
         0 2px 5px
         rgba(0, 0, 0, 0.45);
-
 }
 
 
@@ -507,10 +460,8 @@ body {
    ========================================================= */
 
 .progress-bar-wrapper {
-
     width:
         100%;
-
 }
 
 
@@ -552,7 +503,6 @@ body {
 
         0 3px 10px
         rgba(0, 0, 0, 0.35);
-
 }
 
 
@@ -598,10 +548,8 @@ body {
         cubic-bezier(0.4, 0, 0.2, 1);
 
     box-shadow:
-
         0 0 12px
         rgba(150, 255, 0, 0.55);
-
 }
 
 
@@ -627,10 +575,8 @@ body {
         10px;
 
     text-shadow:
-
         0 1px 3px
         rgba(0, 0, 0, 0.85);
-
 }
 
 
@@ -665,10 +611,8 @@ body {
         800;
 
     text-shadow:
-
         0 1px 3px
         rgba(0, 0, 0, 0.65);
-
 }
 
 
@@ -699,9 +643,7 @@ body {
 
     width:
         100%;
-
 }
-
 
 .welcome div {
 
@@ -713,15 +655,11 @@ body {
 
     margin-bottom:
         5px;
-
 }
 
-
 .welcome div:last-child {
-
     margin-bottom:
         0;
-
 }
 
 
@@ -730,12 +668,9 @@ body {
    ========================================================= */
 
 .best-club {
-
     margin-bottom:
         20px;
-
 }
-
 
 .best-club h3 {
 
@@ -766,7 +701,6 @@ body {
 
     text-align:
         center;
-
 }
 
 
@@ -835,9 +769,7 @@ body {
         all
         0.25s
         ease;
-
 }
-
 
 .club-link:hover {
 
@@ -855,7 +787,6 @@ body {
         inset
         0 1px 0
         rgba(255, 255, 255, 0.70);
-
 }
 
 
@@ -876,9 +807,7 @@ body {
 
     border-radius:
         8px;
-
 }
-
 
 .owner-text {
 
@@ -890,9 +819,7 @@ body {
 
     color:
         #ffffff;
-
 }
-
 
 .owner-text a {
 
@@ -909,9 +836,7 @@ body {
         color
         0.2s
         ease;
-
 }
-
 
 .owner-text a:hover {
 
@@ -920,7 +845,38 @@ body {
 
     text-decoration:
         underline;
+}
 
+
+/* =========================================================
+   OWNER LINK
+   Used for owner and credit links
+   ========================================================= */
+
+.owner-link {
+
+    color:
+        #ffffff;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        bold;
+
+    transition:
+        color
+        0.2s
+        ease;
+}
+
+.owner-link:hover {
+
+    color:
+        #8eeaff;
+
+    text-decoration:
+        underline;
 }
 
 
@@ -969,7 +925,6 @@ body {
         center;
 
     box-shadow:
-
         0 2px 5px
         rgba(190, 169, 225, 0.30);
 
@@ -990,9 +945,7 @@ body {
         box-shadow
         0.35s
         cubic-bezier(0.4,0,0.2,1);
-
 }
-
 
 .join-button:hover {
 
@@ -1000,10 +953,8 @@ body {
         scale(1.11);
 
     box-shadow:
-
         0 4px 10px
         rgba(190, 169, 225, 0.45);
-
 }
 
 
@@ -1024,7 +975,6 @@ body {
 
     border-radius:
         8px;
-
 }
 
 
@@ -1045,7 +995,6 @@ body {
 
     color:
         #ffffff;
-
 }
 
 
@@ -1076,7 +1025,6 @@ body {
         #82e8ff;
 
     box-shadow:
-
         0 3px 10px
         rgba(80, 220, 255, 0.25);
 
@@ -1092,7 +1040,6 @@ body {
         box-shadow
         0.25s
         ease;
-
 }
 
 
@@ -1116,7 +1063,6 @@ body {
 
     border:
         0;
-
 }
 
 
@@ -1130,10 +1076,8 @@ body {
         scale(1.03);
 
     box-shadow:
-
         0 5px 15px
         rgba(80, 220, 255, 0.35);
-
 }
 
 
@@ -1154,9 +1098,7 @@ body {
 
     border-radius:
         8px;
-
 }
-
 
 .credits-made-by {
 
@@ -1171,9 +1113,7 @@ body {
 
     color:
         #ffffff;
-
 }
-
 
 .credits-made-by a {
 
@@ -1190,9 +1130,7 @@ body {
         color
         0.2s
         ease;
-
 }
-
 
 .credits-made-by a:hover {
 
@@ -1201,7 +1139,6 @@ body {
 
     text-decoration:
         underline;
-
 }
 
 
@@ -1219,7 +1156,6 @@ body {
 
     color:
         #ffffff;
-
 }
 
 
@@ -1247,7 +1183,6 @@ body {
 
     padding-top:
         10px;
-
 }
 
 
@@ -1281,9 +1216,7 @@ body {
 
     z-index:
         9999;
-
 }
-
 
 .sparkle {
 
@@ -1303,7 +1236,6 @@ body {
         #c8ff52;
 
     font-family:
-
         Georgia,
         "Times New Roman",
         serif;
@@ -1346,7 +1278,6 @@ body {
         var(--duration)
         ease-in-out
         forwards;
-
 }
 
 
@@ -1362,12 +1293,9 @@ body {
             0;
 
         transform:
-
             scale(0.15)
             rotate(0deg);
-
     }
-
 
     20% {
 
@@ -1375,12 +1303,9 @@ body {
             0.55;
 
         transform:
-
             scale(0.65)
             rotate(30deg);
-
     }
-
 
     40% {
 
@@ -1388,12 +1313,9 @@ body {
             1;
 
         transform:
-
             scale(1)
             rotate(60deg);
-
     }
-
 
     60% {
 
@@ -1401,12 +1323,9 @@ body {
             0.95;
 
         transform:
-
             scale(0.95)
             rotate(90deg);
-
     }
-
 
     80% {
 
@@ -1414,12 +1333,9 @@ body {
             0.55;
 
         transform:
-
             scale(0.7)
             rotate(120deg);
-
     }
-
 
     100% {
 
@@ -1427,10 +1343,9 @@ body {
             0;
 
         transform:
-
             scale(0.15)
             rotate(160deg);
-
     }
 
 }
+```
